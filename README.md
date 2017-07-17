@@ -7,8 +7,7 @@ Running:
 # Build files:
 I added 'build.mk' file.  
 The syntax is:
-`
-source <DIR>  
-form <EXTENSION> <BUILDER>  
-arg <BUILDER> <ARGS (splitted by ~)>  
-`
+
+    source <DIR>  
+    form <EXTENSION> <BUILDER>  
+    arg <BUILDER> <ARGS (splitted by ~)>  
