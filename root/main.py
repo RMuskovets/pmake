@@ -1,10 +1,9 @@
 import os
 
-def start(file, source):
-    data = ""
-    with open(file) as f:
-        data = f.read()
+def start(f):
+    data = f.read()
     lines = data.split('\n')
+    source = ''
     ext = []
     arg = []
     for line in lines:
@@ -15,6 +14,9 @@ def start(file, source):
         elif line.startswith('arg'):
             c = (line.split()[1], line.split()[2])
             arg.append(c)
+            pass
+        elif line.startswith('source'):
+            source = line.split()[1]
             pass
     for s in ext:
         ex = s[0]
@@ -30,5 +32,5 @@ def start(file, source):
 
 #Starting application
 x = input('Enter file name: ')
-src = input('Enter sources directory: ')
-start(x, src)
+file = open(x)
+start(file)
